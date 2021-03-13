@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>LeeKart</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!--<link rel='stylesheet' type='text/css' media='screen' href='main.css'>-->
+</head>
+<body>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .header {
+        height: 70px;
+        width: 100%;
+        background-color: lightgrey;
+        line-height: 70px;
+      }
+
+      h1 {
+        margin-left: 5%;
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+      }
+
+      .search {
+        height: 70px;
+        width: 60%;
+        display: inline-block;
+      }
+
+      .search input {
+          height: 15px;
+          width: 100%;
+          padding: 10px;
+      }
+
+      .products {
+          width: 100%;
+          height: auto;
+      }
+
+      .filter {
+          width: 100%;
+          height: auto;
+          padding: 20px;
+          padding-left: 300px;
+          background-color: lightblue;
+          display: inline-block;
+      }
+
+      .filter input {
+          text-indent: 5px;
+          width: 200px;
+          height: 20px;
+      }
+
+      .productswrapper {
+          background-color: lightgray;
+          margin-left: 150px;
+          width: 1000px;
+          border: 1px solid black;
+          height: auto;
+      }
+
+      .product {
+          background-color: whitesmoke;
+          margin: 15px;
+          width: 300px;
+          display: inline-block;
+          height: auto;
+      }
+
+      .product h3, .product p {
+          padding-left: 10px;
+      }
+
+      button {
+          padding: 10px;
+      }
+
+      .image {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+      }
+
+      .cart {
+        margin-left: 150px;
+        background-color: cornsilk;
+        width: 1000px;
+        height: auto;
+      }
+    </style>
+    
+    <div class="header">
+        <h1>LeeKart</h1>
+        <div class="search">
+            <input type="text" placeholder="Search for products" onkeyup="searchBox(this.value)" />
+        </div>
+    </div>
+
+    <div class="products">
+        <div class="filter">
+            <form onsubmit="filterPrices(event)">
+                <input type="number" class="price" placeholder="Maximum Price" />
+                <input type="number" class="price" placeholder="Minimum Price" />
+                <button type="submit">Filter</button> 
+            </form>
+            <div id="cart_occupency"></div>
+        </div>
+        <div class="productswrapper" id="product">
+            
+        </div>
+    </div>
+
+    <div class="cart">
+        <h1>Cart</h1>
+        <div id="cart">
+
+        </div>
+    </div>
+    
+    <script src='index.js'></script>
+</body>
+</html>
